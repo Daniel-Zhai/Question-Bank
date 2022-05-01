@@ -1,0 +1,4 @@
+﻿  源.c
+D:\资料\学习\Git\Question-Bank\Leetcode\2022_05_01\源.c(160,37): warning C4047: “函数”:“int *”与“int (*)[10]”的间接级别不同
+D:\资料\学习\Git\Question-Bank\Leetcode\2022_05_01\源.c(160,32): warning C4024: “removeDuplicates”: 形参和实参 1 的类型不同
+  2022_05_01.vcxproj -> D:\资料\学习\Git\Question-Bank\Leetcode\2022_05_01\x64\Debug\2022_05_01.exe
