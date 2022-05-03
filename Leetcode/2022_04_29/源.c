@@ -1,7 +1,7 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 //leetcode刷题
-//第1题 两数之和
-//给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
+//第1题 两数之和           通过
+//给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
 //你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
 //你可以按任意顺序返回答案。
 /**
@@ -90,7 +90,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
      return l1;
  }                        ——如果对链表长度有限制，long long int 不溢出的话这个方法可行
  */
-//尝试两个链表同步相加，指针后移，但是进位！      死活通不过一个用例：只剩一个链表时的进位
+//尝试两个链表同步相加，指针后移，但是进位！      死活通不过一个用例：只剩一个链表时的进位     未通过
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
     //int flag = 1;
     int tmp = 0;
