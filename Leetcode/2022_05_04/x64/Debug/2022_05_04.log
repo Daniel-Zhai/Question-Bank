@@ -1,0 +1,6 @@
+﻿  源.c
+D:\资料\学习\Git\Question-Bank\Leetcode\2022_05_04\源.c(118,20): warning C4013: “isupper”未定义；假设外部返回 int
+D:\资料\学习\Git\Question-Bank\Leetcode\2022_05_04\源.c(119,30): warning C4013: “tolower”未定义；假设外部返回 int
+D:\资料\学习\Git\Question-Bank\Leetcode\2022_05_04\源.c(124,42): warning C4013: “islower”未定义；假设外部返回 int
+D:\资料\学习\Git\Question-Bank\Leetcode\2022_05_04\源.c(116,27): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  2022_05_04.vcxproj -> D:\资料\学习\Git\Question-Bank\Leetcode\2022_05_04\x64\Debug\2022_05_04.exe
