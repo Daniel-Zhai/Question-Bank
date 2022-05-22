@@ -55,3 +55,55 @@ int maxAreaOfIsland(int** grid, int gridSize, int* gridColSize) {
     }
     return max;
 }
+
+//617. 合并二叉树                通过
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+struct TreeNode* mergeTrees(struct TreeNode* root1, struct TreeNode* root2) {
+    if (!root1)return root2;
+    if (!root2)return root1;
+    struct TreeNode* mergeroot = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+    mergeroot->val = root1->val + root2->val;
+    mergeroot->left = mergeTrees(root1->left, root2->left);
+    mergeroot->right = mergeTrees(root1->right, root2->right);
+    return mergeroot;
+}
+
+//116. 填充每个节点的下一个右侧节点指针            通过
+/**
+ * Definition for a Node.
+ * struct Node {
+ *     int val;
+ *     struct Node *left;
+ *     struct Node *right;
+ *     struct Node *next;
+ * };
+ */
+
+struct Node* connect(struct Node* root) {
+    //层序遍历       队列
+    if (!root)return root;
+    struct Node* Q[5000];
+    int l = 0;
+    int r = 0;
+    Q[r++] = root;
+    //遍历每层
+    while (l < r) {
+        int num = r - l;
+        //遍历这层中所有结点
+        for (int i = 0; i < num; i++) {
+            struct Node* node = Q[l++];
+            if (i < num - 1)node->next = Q[l];
+            if (node->left)Q[r++] = node->left;
+            if (node->right)Q[r++] = node->right;
+        }
+    }
+    return root;
+}
